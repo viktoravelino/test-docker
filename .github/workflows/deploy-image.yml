@@ -9,9 +9,9 @@
 
 name: Create and publish a Docker image
 
-on:
-  push:
-    # branches: ['release']
+# on:
+#   push:
+#     # branches: ['release']
 
 env:
   REGISTRY: ghcr.io
@@ -34,7 +34,7 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: npm run install
+        run: npm install
 
       - name: Build App
         run: npm run build
